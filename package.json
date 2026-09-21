@@ -1,0 +1,25 @@
+{
+  "name": "top-knights-travails",
+  "version": "1.0.0",
+  "description": "A TOP project to learn how to [represent and traverse graphs](https://www.theodinproject.com/lessons/javascript-knights-travails). In addition, the project is my first attempt at test-driven development.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Stubberson/top-knights-travails.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "module",
+  "bugs": {
+    "url": "https://github.com/Stubberson/top-knights-travails/issues"
+  },
+  "homepage": "https://github.com/Stubberson/top-knights-travails#readme",
+  "devDependencies": {
+    "webpack": "^5.111.1",
+    "webpack-cli": "^7.2.3"
+  }
+}
