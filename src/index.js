@@ -1,3 +1,3 @@
-import {greeting} from './greeting.js'
+import {sum} from './movement.js'
 
-console.log(greeting)
+console.log(sum(1, 2))

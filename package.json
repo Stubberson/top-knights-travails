@@ -4,7 +4,9 @@
   "description": "A TOP project to learn how to [represent and traverse graphs](https://www.theodinproject.com/lessons/javascript-knights-travails). In addition, the project is my first attempt at test-driven development.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "jest",
+    "build": "webpack --config webpack.prod.js",
+    "dev": "webpack serve --open --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
@@ -19,7 +21,10 @@
   },
   "homepage": "https://github.com/Stubberson/top-knights-travails#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.6.8",
+    "jest": "^30.5.2",
     "webpack": "^5.111.1",
-    "webpack-cli": "^7.2.3"
+    "webpack-cli": "^7.2.3",
+    "webpack-dev-server": "^6.0.0"
   }
 }
