@@ -4,11 +4,24 @@
 // Each square on the board is a node (or vertex).
 // A knight’s valid moves from any square represent the edges (or connections) between the vertices.
 
-// Basically, the movement of the knight
-function createAdjacencyList(startVert, endVert) {
-    // Let's say start = [0,0], end = [1, 1]
-    startEdges = [[1, 2], [2, 1]]
-    endEdges = [[2, 3], [3, 2], [0, 3], [3, 0]]
+function exploreMoves(vertex) {
+    const maxMoves = 8
+    const movement = [-2, -1, 2, 1, 2, -1, -2, 1]
+    
+    let possibleMoves = []
+    let i = 0
+    while (i < maxMoves) {
+        let dX = vertex[0] + movement[i]
+        let dY = vertex[1] + movement[(maxMoves - 1) - i]
+        let move = [dX, dY]
+
+        // Ensure that the move stays within the board
+        if (!move.some(coord => coord < 0 || coord > 7)) {
+            possibleMoves.push(move)
+        }
+        i++
+    }
+    return possibleMoves
 }
 
 function knightMoves(startVert, endVert) {
@@ -17,8 +30,6 @@ function knightMoves(startVert, endVert) {
     if (inputSquares.some(a => a < 0 || a > 7)) {
         throw new Error('Given square(s) out of range')
     }
-
-
 };
 
-module.exports = knightMoves
+module.exports = { knightMoves, exploreMoves };
