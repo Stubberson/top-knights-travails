@@ -85,4 +85,4 @@ function knightMoves(startSqr, endSqr) {
 }
 
 console.log(knightMoves([0,0],[7,7]))
-module.exports = { knightMoves, exploreSquares };
+module.exports = { knightMoves, exploreSquares, findEdges, constructPath };
